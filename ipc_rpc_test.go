@@ -12,7 +12,7 @@ import (
 
 func BenchmarkIPC(b *testing.B) {
 
-	ipcPath := "ipc:~/.ethereum/geth.ipc"
+	ipcPath := "ipc://~/.ethereum/geth.ipc"
 	client, err := ethclient.Dial(ipcPath)
 	if err != nil {
 		b.Fatal("Error when initializing client", err)
