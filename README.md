@@ -15,6 +15,7 @@ goos: linux
 goarch: amd64
 pkg: geth_ipc_rpc_bench
 cpu: AMD Ryzen 5 3400G with Radeon Vega Graphics    
+
 BenchmarkIPC-8   	    6104	    222998 ns/op
 BenchmarkIPC-8   	    5257	    229704 ns/op
 BenchmarkIPC-8   	    4974	    225137 ns/op
