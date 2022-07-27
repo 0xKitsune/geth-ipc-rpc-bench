@@ -26,7 +26,7 @@ func BenchmarkIPC(b *testing.B) {
 
 func BenchmarkRPC(b *testing.B) {
 
-	rpcPort := "https://eth-mainnet.g.alchemy.com/v2/AXIyCY50RSPKbuzwVYONrQJ-7R9UFGvm"
+	rpcPort := "http://localhost:8545"
 	client, err := ethclient.Dial(rpcPort)
 	if err != nil {
 		b.Fatal("Error when initializing client", err)
