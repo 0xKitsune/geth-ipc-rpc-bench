@@ -41,7 +41,9 @@ ok  	geth_ipc_rpc_bench	26.216s
 
 
 //==================================================
+
 Average IPC: 226763.3 ns/op
+
 Average RPC: 228728.4 ns/op
 
 
