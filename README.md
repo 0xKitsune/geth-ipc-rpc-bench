@@ -1,5 +1,5 @@
 # Geth IPC / RPC Bench
-Benchmarks comparing Geth's IPC and RPC endpoints. To start the benchmark, run `go test -bench=. -count 10`. The current results are listed below. 
+Benchmarks comparing Geth's IPC and RPC endpoints. To start the benchmark, run `go test -bench=. -count 10`. Note that you will need to enable the `--http` flag when running Geth to expose the RPC endpoint. The current results are listed below. 
 
 ## Testing environment hardware  
 - Ryzen 5 3600G
@@ -10,42 +10,42 @@ Benchmarks comparing Geth's IPC and RPC endpoints. To start the benchmark, run `
 ## Results
 
 ```
-
 goos: linux
 goarch: amd64
 pkg: geth_ipc_rpc_bench
 cpu: AMD Ryzen 5 3400G with Radeon Vega Graphics    
 
-BenchmarkIPC-8   	    6104	    222998 ns/op
-BenchmarkIPC-8   	    5257	    229704 ns/op
-BenchmarkIPC-8   	    4974	    225137 ns/op
-BenchmarkIPC-8   	    4657	    233986 ns/op
-BenchmarkIPC-8   	    4971	    270283 ns/op
-BenchmarkIPC-8   	   10000	    194288 ns/op
-BenchmarkIPC-8   	    5424	    232378 ns/op
-BenchmarkIPC-8   	    5090	    232598 ns/op
-BenchmarkIPC-8   	    5032	    207802 ns/op
-BenchmarkIPC-8   	    8047	    218459 ns/op
+BenchmarkIPC-8   	    7995	    226644 ns/op
+BenchmarkIPC-8   	    5187	    221686 ns/op
+BenchmarkIPC-8   	    5044	    222848 ns/op
+BenchmarkIPC-8   	    5132	    222848 ns/op
+BenchmarkIPC-8   	    5107	    221179 ns/op
+BenchmarkIPC-8   	    5457	    228048 ns/op
+BenchmarkIPC-8   	    5875	    220197 ns/op
+BenchmarkIPC-8   	    5378	    219127 ns/op
+BenchmarkIPC-8   	    5496	    220681 ns/op
+BenchmarkIPC-8   	    5396	    220749 ns/op
 
-BenchmarkRPC-8   	    4752	    219878 ns/op
-BenchmarkRPC-8   	    4905	    241542 ns/op
-BenchmarkRPC-8   	    7490	    230226 ns/op
-BenchmarkRPC-8   	    6016	    168425 ns/op
-BenchmarkRPC-8   	    4558	    248492 ns/op
-BenchmarkRPC-8   	    4699	    239182 ns/op
-BenchmarkRPC-8   	    6621	    213950 ns/op
-BenchmarkRPC-8   	    5548	    247520 ns/op
-BenchmarkRPC-8   	    5222	    242062 ns/op
-BenchmarkRPC-8   	    4585	    236007 ns/op
+BenchmarkRPC-8   	    2004	    530629 ns/op
+BenchmarkRPC-8   	    1958	    565381 ns/op
+BenchmarkRPC-8   	    2067	    560948 ns/op
+BenchmarkRPC-8   	    2040	    571529 ns/op
+BenchmarkRPC-8   	    2047	    571289 ns/op
+BenchmarkRPC-8   	    2253	    533267 ns/op
+BenchmarkRPC-8   	    1924	    552074 ns/op
+BenchmarkRPC-8   	    2023	    572780 ns/op
+BenchmarkRPC-8   	    2020	    585387 ns/op
+BenchmarkRPC-8   	    1971	    592632 ns/op
+
 PASS
-ok  	geth_ipc_rpc_bench	26.216s
+ok  	geth_ipc_rpc_bench	26.592s
 
 
 //==================================================
 
-Average IPC: 226763.3 ns/op
+Average IPC: 222400.7 ns/op
 
-Average RPC: 228728.4 ns/op
+Average RPC: 513591.6 ns/op
 
 
 
