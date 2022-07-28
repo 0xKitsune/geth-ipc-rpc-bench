@@ -20,7 +20,10 @@ func BenchmarkIPC(b *testing.B) {
 
 	targetAddress := common.HexToAddress("0x29F06Dc85D64B9748465735A2C61a524Ffd28BDe")
 	for n := 0; n < b.N; n++ {
-		client.BalanceAt(context.Background(), targetAddress, nil)
+		_, err := client.BalanceAt(context.Background(), targetAddress, nil)
+		if err != nil {
+			b.Fatal(err)
+		}
 	}
 }
 
@@ -35,6 +38,9 @@ func BenchmarkRPC(b *testing.B) {
 	targetAddress := common.HexToAddress("0x29F06Dc85D64B9748465735A2C61a524Ffd28BDe")
 
 	for n := 0; n < b.N; n++ {
-		client.BalanceAt(context.Background(), targetAddress, nil)
+		_, err := client.BalanceAt(context.Background(), targetAddress, nil)
+		if err != nil {
+			b.Fatal(err)
+		}
 	}
 }
