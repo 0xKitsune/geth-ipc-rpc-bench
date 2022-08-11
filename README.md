@@ -2,7 +2,7 @@
 Benchmarks comparing Geth's IPC and RPC endpoints. To start the benchmark, run `go test -bench=. -count 10`. Note that you will need to enable the `--http` flag when running Geth to expose the RPC endpoint. The current results are listed below. 
 
 ## Testing environment hardware  
-- Ryzen 5 3600G
+- Ryzen 5 3400G
 - 32G DDR4-3200 RAM
 - 1TB WD Black SN750 NVME
 
